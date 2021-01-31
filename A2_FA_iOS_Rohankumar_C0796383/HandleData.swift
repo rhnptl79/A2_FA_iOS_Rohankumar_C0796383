@@ -30,11 +30,14 @@ class HandleData {
         let product = self.addRecord("Product", context: context) as? Product
         let productId = item["productId"] ?? "0"
         let productPrice = item["productPrice"] ?? "0"
+        
+        
+        //Setting Values (add products)
         product?.productId = Int16(productId) ?? 0
         product?.productName = item["productName"] ?? ""
         product?.productDescription = item["productDescription"] ?? ""
         product?.productProvider = item["productProvider"] ?? ""
         product?.productPrice = Double(productPrice) ?? 0
-        CoreData.sharedCoreData.saveContext()
+        CoreData.sharedCoreData.storeContext()
     }
 }

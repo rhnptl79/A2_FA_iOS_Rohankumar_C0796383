@@ -9,8 +9,23 @@ class CoreData {
     
     static let sharedCoreData = CoreData()
     
-    // MARK: - Core Data stack
-
+    func storeContext ()
+    {
+        let context = persistentContainer.viewContext
+        if context.hasChanges
+        {
+            do
+            {
+                try context.save()
+            }
+            catch
+            {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
+    
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "A2_FA_iOS_Rohankumar_C0796383")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
@@ -20,19 +35,5 @@ class CoreData {
         })
         return container
     }()
-    
-    // MARK: - Core Data Saving support
-
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Undistinguished error \(nserror), \(nserror.userInfo)")
-            }
-        }
-    }
     
 }

@@ -11,18 +11,10 @@ class ProductListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchProductsFromPlist()
+        self.fetchProducts()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let controller = segue.destination as? ProductDetailVC
-        {
-            controller.product = sender as? Product
-        }
-    }
-    
-    func fetchProductsFromPlist()
+    func fetchProducts()
     {
         let EnterData = UserDefaults.standard.bool(forKey: "enterData")
         if EnterData
@@ -33,7 +25,8 @@ class ProductListVC: UIViewController {
             }
         }
         else {
-            if let dest = Bundle.main.path(forResource: "product", ofType: "plist"), let data = NSData(contentsOfFile: dest)
+            if let destination = Bundle.main.path(forResource: "product", ofType: "plist"),
+               let data = NSData(contentsOfFile: destination)
             {
                 do
                 {
@@ -58,7 +51,17 @@ class ProductListVC: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let controller = segue.destination as? ProductDetailVC
+        {
+            controller.product = sender as? Product
+        }
+    }
 }
+
+
 
 extension ProductListVC: UITableViewDelegate, UITableViewDataSource
 {
@@ -71,9 +74,9 @@ extension ProductListVC: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "product_cell", for: indexPath)
-        let labelItem = cell.viewWithTag(10) as? UILabel// tage of label is 10
+        let labelItemname = cell.viewWithTag(10) as? UILabel// tage of label is 10
         let product = products[indexPath.row]
-        labelItem?.text = product.productName
+        labelItemname?.text = product.productName
         return cell
     }
     

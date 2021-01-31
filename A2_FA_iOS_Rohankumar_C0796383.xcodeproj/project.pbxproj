@@ -71,7 +71,7 @@
 				0D016DCB25C58B4800C8353B /* SceneDelegate.swift */,
 				0D016DE025C58B8300C8353B /* CoreData.swift */,
 				0D016DE225C58C6A00C8353B /* HandleData.swift */,
-				EA4395FD25C687B1006763AF /* ViewContoller */,
+				EA4395FD25C687B1006763AF /* Contoller */,
 				0D016DCF25C58B4800C8353B /* Main.storyboard */,
 				0D016DD525C58B4A00C8353B /* Assets.xcassets */,
 				0D016DD725C58B4A00C8353B /* LaunchScreen.storyboard */,
@@ -81,13 +81,13 @@
 			path = A2_FA_iOS_Rohankumar_C0796383;
 			sourceTree = "<group>";
 		};
-		EA4395FD25C687B1006763AF /* ViewContoller */ = {
+		EA4395FD25C687B1006763AF /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
 				0D016DE825C5A78500C8353B /* ProductDetailVC.swift */,
 				0D016DCD25C58B4800C8353B /* ProductListVC.swift */,
 			);
-			path = ViewContoller;
+			path = Contoller;
 			sourceTree = "<group>";
 		};
 		EA4395FE25C68822006763AF /* Model */ = {
