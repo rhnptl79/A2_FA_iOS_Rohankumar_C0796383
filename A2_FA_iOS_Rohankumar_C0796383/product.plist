@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>productId</key>
+		<string>1</string>
+		<key>productName</key>
+		<string>DeathAdder</string>
+		<key>productDescription</key>
+		<string>It is wireless Gamming Mouse</string>
+		<key>productProvider</key>
+		<string>Razer</string>
+		<key>productPrice</key>
+		<string>1649</string>
+	</dict>
+	<dict>
+		<key>productId</key>
+		<string>2</string>
+		<key>productName</key>
+		<string>Desk Jet</string>
+		<key>productDescription</key>
+		<string>It&apos;s is the best printer in the market</string>
+		<key>productProvider</key>
+		<string>HP</string>
+		<key>productPrice</key>
+		<string>3299</string>
+	</dict>
+	<dict>
+		<key>productId</key>
+		<string>3</string>
+		<key>productName</key>
+		<string>Router</string>
+		<key>productDescription</key>
+		<string>It is used to connect your device with internet wirelessly</string>
+		<key>productProvider</key>
+		<string>TP-Link</string>
+		<key>productPrice</key>
+		<string>3000</string>
+	</dict>
+	<dict>
+		<key>productId</key>
+		<string>4</string>
+		<key>productName</key>
+		<string>HyperX Fury</string>
+		<key>productDescription</key>
+		<string>Best RAM for Gamming</string>
+		<key>productProvider</key>
+		<string>HyperX</string>
+		<key>productPrice</key>
+		<string>3555</string>
+	</dict>
+	<dict>
+		<key>productId</key>
+		<string>5</string>
+		<key>productName</key>
+		<string>OnePlus6</string>
+		<key>productDescription</key>
+		<string>Super fast mobile</string>
+		<key>productProvider</key>
+		<string>OnePlus</string>
+		<key>productPrice</key>
+		<string>40000</string>
+	</dict>
+	<dict>
+		<key>productId</key>
+		<string>6</string>
+		<key>productName</key>
+		<string>Lenovo Y50-70</string>
+		<key>productDescription</key>
+		<string>It is the Gamming Laptop</string>
+		<key>productProvider</key>
+		<string>Lenovo</string>
+		<key>productPrice</key>
+		<string>85000</string>
+	</dict>
+	<dict>
+		<key>productId</key>
+		<string>7</string>
+		<key>productName</key>
+		<string>Monitor</string>
+		<key>productDescription</key>
+		<string>Super Clearity and refresh Rate</string>
+		<key>productProvider</key>
+		<string>LG</string>
+		<key>productPrice</key>
+		<string>32000</string>
+	</dict>
+	<dict>
+		<key>productId</key>
+		<string>8</string>
+		<key>productName</key>
+		<string>Magic Mouse</string>
+		<key>productDescription</key>
+		<string>Apple Mouse</string>
+		<key>productProvider</key>
+		<string>Apple</string>
+		<key>productPrice</key>
+		<string>9000</string>
+	</dict>
+	<dict>
+		<key>productId</key>
+		<string>9</string>
+		<key>productName</key>
+		<string>Headphone WH-1000XM4</string>
+		<key>productDescription</key>
+		<string>Best Wireless Headphones</string>
+		<key>productProvider</key>
+		<string>Sony</string>
+		<key>productPrice</key>
+		<string>25000</string>
+	</dict>
+	<dict>
+		<key>productId</key>
+		<string>10</string>
+		<key>productName</key>
+		<string>Boat grande</string>
+		<key>productDescription</key>
+		<string>Best Wireless Speaker</string>
+		<key>productProvider</key>
+		<string>Boat</string>
+		<key>productPrice</key>
+		<string>2000</string>
+	</dict>
+</array>
+</plist>
