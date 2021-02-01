@@ -404,7 +404,7 @@
         <!--Products-->
         <scene sceneID="Hi8-KM-Ouk">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="0x8-cq-GMd" customClass="ProviderProductListVC" customModule="A2_FA_iOS_Rohankumar_C0796383" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="0x8-cq-GMd" customClass="SourceResultListVC" customModule="A2_FA_iOS_Rohankumar_C0796383" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ag1-Io-bzC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -543,7 +543,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="0Vl-dl-siw"/>
-        <segue reference="N7A-Gj-p6a"/>
+        <segue reference="MQq-PH-HBx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

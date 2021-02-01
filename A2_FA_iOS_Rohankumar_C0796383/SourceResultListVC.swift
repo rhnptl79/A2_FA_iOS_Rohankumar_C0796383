@@ -1,11 +1,11 @@
 //
-//  ProviderProductListVC.swift
+//  SourceResultListVC.swift
 //  A2_FA_iOS_Rohankumar_C0796383
 
 
 import UIKit
 
-class ProviderProductListVC: UIViewController {
+class SourceResultListVC: UIViewController {
 
     @IBOutlet weak var tblView: UITableView!
     
@@ -37,7 +37,7 @@ class ProviderProductListVC: UIViewController {
 }
 
 
-extension ProviderProductListVC: UITableViewDelegate, UITableViewDataSource {
+extension SourceResultListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         products?.count ?? 0
@@ -45,7 +45,7 @@ extension ProviderProductListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productcell", for: indexPath)
-        let labelItem = cell.viewWithTag(10) as? UILabel// tage of label is 10
+        let labelItem = cell.viewWithTag(10) as? UILabel
         let product = products?[indexPath.row]
         labelItem?.text = product?.productName
         return cell

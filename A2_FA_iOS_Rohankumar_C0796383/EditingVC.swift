@@ -33,11 +33,7 @@ class EditingVC: UIViewController {
     
     @IBAction func didTapSaveBtn(_ sender: UIBarButtonItem) {
         
-        if (txtProductId.text?.isEmpty ?? false) ||
-            (txtProductName.text?.isEmpty ?? false) ||
-            (txtProductPrice.text?.isEmpty ?? false) ||
-            (txtProductProvider.text?.isEmpty ?? false) ||
-            (txtProductDescription.text?.isEmpty ?? false){
+        if (txtProductId.text?.isEmpty ?? false) || (txtProductName.text?.isEmpty ?? false) || (txtProductPrice.text?.isEmpty ?? false) || (txtProductProvider.text?.isEmpty ?? false) || (txtProductDescription.text?.isEmpty ?? false){
             showAlert(message: "Please fill all the field", options: ["Ok"], completion: nil)
         }
         else {
