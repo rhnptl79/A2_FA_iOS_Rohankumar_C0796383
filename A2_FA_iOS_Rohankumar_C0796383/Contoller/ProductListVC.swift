@@ -7,14 +7,32 @@ import UIKit
 class ProductListVC: UIViewController {
 
     @IBOutlet weak var tblView: UITableView!
+    
+    @IBOutlet weak var txtSearch: UITextField!
+    
+    
     var products: [Product] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.fetchProducts()
+        tblView.tableFooterView = UIView()
     }
     
-    func fetchProducts()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.txtSearch.text = ""
+        self.fetchProductsFromDB()
+    }
+    
+    func fetchProductsFromDB()  {
+        if let product = HandleData().getAllProducts() {
+            self.products.removeAll()
+            self.products.append(contentsOf: product)
+            tblView.reloadData()
+        }
+    }
+    
+    /*func fetchProducts()
     {
         let EnterData = UserDefaults.standard.bool(forKey: "enterData")
         if EnterData
@@ -47,7 +65,7 @@ class ProductListVC: UIViewController {
                 }
             }
         }
-    }
+    }*/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -81,6 +99,15 @@ extension ProductListVC: UITableViewDelegate, UITableViewDataSource
     {
         let product = products[indexPath.row]
         self.performSegue(withIdentifier: "productListToDetail", sender: product)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let product = products[indexPath.row]
+            products.remove(at: indexPath.row)
+            HandleData().deleteProduct(product)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 
 }

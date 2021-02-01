@@ -18,6 +18,19 @@ class HandleData {
         return self.readRecords(fromCoreData: "Product", context: context) as? [Product]
     }
     
+    func readAllProductsBasedOnProviders(_ provider: String) -> [Product]? {
+        let context = CoreData.sharedCoreData.persistentContainer.viewContext
+        let arrayItem = self.readRecords(fromCoreData: "Product", context: context) as? [Product]
+        let items = arrayItem?.filter({$0.productProvider == provider})
+        return items
+    }
+    
+    func deleteProduct(_ product: Product)  {
+        let context = CoreData.sharedCoreData.persistentContainer.viewContext
+        context.delete(product)
+        CoreData.sharedCoreData.storeContext()
+    }
+    
     //reading(go through) all products that we have added
     func readRecords(fromCoreData table: String, context: NSManagedObjectContext) -> [Any] {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
