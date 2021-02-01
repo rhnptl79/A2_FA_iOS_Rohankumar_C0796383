@@ -7,11 +7,18 @@ import CoreData
 
 class HandleData {
     
-    func readAllProducts() -> [Product]? {
+    
+    func addRecord(_ table: String, context: NSManagedObjectContext) -> Any? {
+        return NSEntityDescription.insertNewObject(forEntityName: table, into: context)
+    }
+
+    //check all products
+    func getAllProducts() -> [Product]? {
         let context = CoreData.sharedCoreData.persistentContainer.viewContext
         return self.readRecords(fromCoreData: "Product", context: context) as? [Product]
     }
     
+    //reading(go through) all products that we have added
     func readRecords(fromCoreData table: String, context: NSManagedObjectContext) -> [Any] {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>()
         let entity = NSEntityDescription.entity(forEntityName: table, in: context)
@@ -21,10 +28,7 @@ class HandleData {
         return records!
     }
     
-    func addRecord(_ table: String, context: NSManagedObjectContext) -> Any? {
-        return NSEntityDescription.insertNewObject(forEntityName: table, into: context)
-    }
-    
+    //Adding the product in list and store it
     func addProducts(_ item: [String:String])  {
         let context = CoreData.sharedCoreData.persistentContainer.viewContext
         let product = self.addRecord("Product", context: context) as? Product

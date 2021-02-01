@@ -1,5 +1,5 @@
 //
-//  ViewController.swift 
+//  ProductListVC.swift 
 
 
 import UIKit
@@ -19,7 +19,7 @@ class ProductListVC: UIViewController {
         let EnterData = UserDefaults.standard.bool(forKey: "enterData")
         if EnterData
         {
-            if let product = HandleData().readAllProducts()
+            if let product = HandleData().getAllProducts()
             {
                 self.products.append(contentsOf: product)
             }
@@ -33,11 +33,8 @@ class ProductListVC: UIViewController {
                     let pListData = try PropertyListSerialization.propertyList(from: data as Data, options: .mutableContainers, format: nil)
                     if let pListData = pListData as? [[String : String]]
                     {
-                        for product in pListData
-                        {
-                            HandleData().addProducts(product )
-                        }
-                        if let product = HandleData().readAllProducts()
+                        for product in pListData { HandleData().addProducts(product ) }
+                        if let product = HandleData().getAllProducts()
                         {
                             self.products.append(contentsOf: product)
                         }
@@ -56,7 +53,7 @@ class ProductListVC: UIViewController {
     {
         if let controller = segue.destination as? ProductDetailVC
         {
-            controller.product = sender as? Product
+            controller.item = sender as? Product
         }
     }
 }
@@ -96,7 +93,7 @@ extension ProductListVC: UITextFieldDelegate
         {
             let updatedText = text.replacingCharacters(in: textRange, with: string).lowercased()
             
-            if let product = HandleData().readAllProducts()
+            if let product = HandleData().getAllProducts()
             {
                 if updatedText.isEmpty
                 {

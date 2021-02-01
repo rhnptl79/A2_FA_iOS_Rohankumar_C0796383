@@ -1,5 +1,5 @@
 //
-//  ProductDetailViewController.swift
+//  ProductDetailVC.swift
 
 
 import UIKit
@@ -7,15 +7,14 @@ import UIKit
 class ProductDetailVC: UIViewController {
     @IBOutlet var listTextItems: [UILabel]!
     
-    var product: Product?
-
+    var item: Product?
     override func viewDidLoad() {
         super.viewDidLoad()
-        listTextItems[0].text = "Product ID: " + String(product?.productId ?? 0)
-        listTextItems[1].text = "Product Name: " + (product?.productName ?? "")
-        listTextItems[2].text = "Product Description: " + (product?.productDescription ?? "")
-        listTextItems[3].text = "Product Price: " + String(product?.productPrice ?? 0)
-        listTextItems[4].text = "Product Provider: " + (product?.productProvider ?? "")
+        listTextItems[0].text = "Product ID: " + String(item?.productId ?? 0)
+        listTextItems[1].text = "Product Name: " + (item?.productName ?? "")
+        listTextItems[2].text = "Product Description: " + (item?.productDescription ?? "")
+        listTextItems[3].text = "Product Price: " + String(item?.productPrice ?? 0)
+        listTextItems[4].text = "Product Provider: " + (item?.productProvider ?? "")
     }
 
 }
