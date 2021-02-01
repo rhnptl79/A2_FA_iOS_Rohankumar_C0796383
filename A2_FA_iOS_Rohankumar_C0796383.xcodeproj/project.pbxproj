@@ -20,7 +20,7 @@
 		EA4865CC25C5D82700B792D5 /* A2_FA_iOS_Rohankumar_C0796383.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA4865CA25C5D82700B792D5 /* A2_FA_iOS_Rohankumar_C0796383.xcdatamodeld */; };
 		EAE5557E25C8480F00405CA0 /* EditingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5557D25C8480F00405CA0 /* EditingVC.swift */; };
 		EAE5558125C84A7B00405CA0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5558025C84A7B00405CA0 /* Extension.swift */; };
-		EAE5558525C84BFE00405CA0 /* ProviderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5558425C84BFE00405CA0 /* ProviderListVC.swift */; };
+		EAE5558525C84BFE00405CA0 /* SourceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5558425C84BFE00405CA0 /* SourceListVC.swift */; };
 		EAE5558925C84EB400405CA0 /* SourceResultListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5558825C84EB300405CA0 /* SourceResultListVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		EA4865CB25C5D82700B792D5 /* A2_FA_iOS_Rohankumar_C0796383.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = A2_FA_iOS_Rohankumar_C0796383.xcdatamodel; sourceTree = "<group>"; };
 		EAE5557D25C8480F00405CA0 /* EditingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditingVC.swift; path = ../EditingVC.swift; sourceTree = "<group>"; };
 		EAE5558025C84A7B00405CA0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		EAE5558425C84BFE00405CA0 /* ProviderListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProviderListVC.swift; path = ../ProviderListVC.swift; sourceTree = "<group>"; };
+		EAE5558425C84BFE00405CA0 /* SourceListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SourceListVC.swift; path = ../SourceListVC.swift; sourceTree = "<group>"; };
 		EAE5558825C84EB300405CA0 /* SourceResultListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SourceResultListVC.swift; path = ../SourceResultListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,11 +93,11 @@
 		EA4395FD25C687B1006763AF /* Contoller */ = {
 			isa = PBXGroup;
 			children = (
-				0D016DE825C5A78500C8353B /* ProductDetailVC.swift */,
-				0D016DCD25C58B4800C8353B /* ProductListVC.swift */,
 				EAE5557D25C8480F00405CA0 /* EditingVC.swift */,
-				EAE5558425C84BFE00405CA0 /* ProviderListVC.swift */,
+				0D016DE825C5A78500C8353B /* ProductDetailVC.swift */,
 				EAE5558825C84EB300405CA0 /* SourceResultListVC.swift */,
+				0D016DCD25C58B4800C8353B /* ProductListVC.swift */,
+				EAE5558425C84BFE00405CA0 /* SourceListVC.swift */,
 			);
 			path = Contoller;
 			sourceTree = "<group>";
@@ -191,7 +191,7 @@
 				0D016DCA25C58B4800C8353B /* AppDelegate.swift in Sources */,
 				0D016DCC25C58B4800C8353B /* SceneDelegate.swift in Sources */,
 				0D016DE325C58C6A00C8353B /* HandleData.swift in Sources */,
-				EAE5558525C84BFE00405CA0 /* ProviderListVC.swift in Sources */,
+				EAE5558525C84BFE00405CA0 /* SourceListVC.swift in Sources */,
 				0D016DE125C58B8300C8353B /* CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,10 +21,10 @@ class ProductListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.txtSearch.text = ""
-        self.fetchProductsFromDB()
+        self.bringProducts()
     }
     
-    func fetchProductsFromDB()  {
+    func bringProducts()  {
         if let product = HandleData().getAllProducts() {
             self.products.removeAll()
             self.products.append(contentsOf: product)
